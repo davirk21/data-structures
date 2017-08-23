@@ -6,9 +6,12 @@ var Queue = function() {
 
   // Implement the methods below
   var size = 0;
+  var add = 0;
+  var subtract = 0;
   someInstance.enqueue = function(value) {
-    storage[size] = value;
+    storage[add] = value;
     size ++;
+    add ++;
   };
   
 
@@ -18,6 +21,10 @@ var Queue = function() {
     } else {
       size;
     }
+    var popped = storage[subtract];
+    delete storage[subtract];
+    subtract++;
+    return popped;
   };
 
   someInstance.size = function() {
