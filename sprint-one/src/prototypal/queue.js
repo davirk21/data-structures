@@ -10,11 +10,19 @@ var Queue = function() {
 
 var queueMethods = {};
 
+queueMethods.enqueue = function() {
+  this.count++;
+};
 
+queueMethods.dequeue = function() {
+  if (this.count > 0) {
+    this.count--;
+  } else {
+    this.count;
+  }
+};
 
-
-
-queueMethods.size = function () {
+queueMethods.size = function() {
   return this.count;
-}
+};
 
