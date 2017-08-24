@@ -21,7 +21,11 @@ stackMethods.push = function() {
 };
 
 stackMethods.pop = function() {
-
+  if (this.count > 0) {
+    this.count--;
+  } else {
+    this.count;
+  }
 };
 
 stackMethods.size = function() {
