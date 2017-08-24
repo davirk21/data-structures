@@ -4,22 +4,27 @@ var Stack = function() {
 
   var storage = Object.create(stackMethods);
   storage.count = 0;
-  
+  storage.result = {};
+
   return storage;
 };
 
 var stackMethods = {};
 
-stackMethods.push = function() {
+stackMethods.push = function(value) {
+  this.result[this.count] = value;
   this.count++;
 };
 
 stackMethods.pop = function() { 
-  if (this.count > 0){
+  if (this.count > 0) {
     this.count--;
   } else {
     this.count;
   }
+  var popped = this.result[this.count];
+  delete this.result[this.count];
+  return popped;
 };
 
 stackMethods.size = function() {
