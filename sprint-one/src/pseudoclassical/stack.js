@@ -10,3 +10,19 @@ Stack.prototype.size = function() {
 };
 
 
+Stack.prototype.push = function() {
+  return this.count++;
+};
+
+
+Stack.prototype.pop = function() {
+  if (this.count > 0) {
+    this.count--;
+  } else {
+    this.count;
+  }
+};
+
+
+
+
