@@ -10,7 +10,19 @@ var Stack = function() {
 
 var stackMethods = {};
 
+stackMethods.push = function() {
+  this.count++;
+};
+
+stackMethods.pop = function() { 
+  if (this.count > 0){
+    this.count--;
+  } else {
+    this.count;
+  }
+};
+
 stackMethods.size = function() {
   return this.count;
-}
+};
 
