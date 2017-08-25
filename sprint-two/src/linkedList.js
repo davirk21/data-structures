@@ -33,29 +33,28 @@ var LinkedList = function() {
   list.contains = function(target) {
     var place = this.head;
     
-    var helper = function (place, target) {
-      if (place.value === target) {
+    var test = function(head, num) {
+      if (head.value === num) {
         return true;
-      } else if (place.next !== null)  {
-        return helper(place.next, target);       
+      } else if (head.next !== null) {
+        return test(head.next, num);
       }
       return false;
-    };  
-
-    return helper(place, target);
-  
-    // var test = function(head, num) {
-    //   if (head.value === num) {
+    };
+    
+    return test(place, target);
+    
+    // var helper = function (place, target) {
+    //   if (place.value === target) {
     //     return true;
-    //   } else if (head.next !== null) {
-    //     return test(head.next, num);
+    //   } else if (place.next !== null)  {
+    //     return helper(place.next, target);       
     //   }
     //   return false;
-    // };
-    
-    // return test(place, target);
-    
+    // };  
 
+    // return helper(place, target);
+  
     // while (place.next !== null) {
     //   if (place.value === target) {
     //     return true;
