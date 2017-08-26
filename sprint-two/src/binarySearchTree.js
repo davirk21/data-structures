@@ -3,6 +3,7 @@ var BinarySearchTree = function(value) {
   var instance = {};
 
   instance.tree = {};
+  instance.head = null;
   
   _.extend(instance, treeMethod);
 
@@ -12,9 +13,14 @@ var BinarySearchTree = function(value) {
 var treeMethod = {};
 
 treeMethod.insert = function(value) {
-  if (!this.tree){
-    this.tree[value] = {left: null, right: null};
-  }
+  // if (!this.tree) {
+  //   this.tree[value] = {left: null, right: null};
+  //   this.head = value;
+  // } else if ((value < this.head && this.head[left] === null) {
+  
+  this.tree[value] = {left: null, right: null};
+
+
 
 };
 
