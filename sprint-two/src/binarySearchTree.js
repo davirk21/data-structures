@@ -12,6 +12,9 @@ var BinarySearchTree = function(value) {
 var treeMethod = {};
 
 treeMethod.insert = function(value) {
+  if (!this.tree){
+    this.tree[value] = {left: null, right: null};
+  }
 
 };
 
