@@ -16,8 +16,9 @@ HashTable.prototype.insert = function(k, v) {
     var place = 0;
     for (var i = 0; i < storage.length; i++) {
       var tuple = storage[i];
-      if (tuple[0] === k) {
+      if (tuple[0] === k)  {
         truth = true;
+        place = i
       }
     }
     if(truth) {
