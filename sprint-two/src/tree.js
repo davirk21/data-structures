@@ -16,14 +16,13 @@ treeMethods.addChild = function(value) {
 };
 
 treeMethods.contains = function(target) {
-  
-  console.log(this);
+
   //create a helper function to recurse contains
   var test = function (node, target) { 
       // if the value of tree equals target...
-      if (node.value === target) {
+    if (node.value === target) {
         //return true;
-        return true;
+      return true;
 
       // //else if the first children does exist...
       // } else if (node.children.length > 0) {
@@ -34,15 +33,15 @@ treeMethods.contains = function(target) {
       //     }
       // } 
 
-      } else if (node.children[0] !== undefined) {
-        for (var i = 0; i < node.children.length; i++){
-          if (test(node.children[i], target)){
-            return true;
-          }
+    } else if (node.children[0] !== undefined) {
+      for (var i = 0; i < node.children.length; i++) {
+        if (test(node.children[i], target)) {
+          return true;
         }
       }
+    }
        
-     return false;   
+    return false;   
   };
 
   return test(this, target);
